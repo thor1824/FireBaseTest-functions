@@ -1,0 +1,37 @@
+{
+  "name": "functions",
+  "scripts": {
+    "lint": "tslint --project tsconfig.json",
+    "build": "tsc --project tsconfig-build.json",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "test": "jest --coverage",
+    "test:watch": "jest --coverage --watchAll",
+    "prettier": "prettier --check \"**/*.ts\""
+  },
+  "engines": {
+    "node": "8"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase-admin": "^8.6.0",
+    "firebase-functions": "^3.3.0",
+    "jest-createspyobj": "^1.2.2",
+    "jest-mock-extended": "^1.0.8",
+    "moq.ts": "^5.0.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.4",
+    "jest": "^25.1.0",
+    "ts-jest": "^25.2.1",
+    "tslint": "^5.12.0",
+    "typescript": "^3.2.2",
+    "firebase-functions-test": "^0.1.6"
+  },
+  "private": true
+}

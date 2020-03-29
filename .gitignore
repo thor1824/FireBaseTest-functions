@@ -1,0 +1,12 @@
+## Compiled JavaScript files
+**/*.js
+**/*.js.map
+secret.json
+coverage
+lib
+!jest.config.js
+
+# Typescript v1 declaration files
+typings/
+
+node_modules/
