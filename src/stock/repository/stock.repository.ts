@@ -4,9 +4,9 @@ import {Product} from '../../product/model/product';
 
 export interface StockRepository {
 
-  createStockEntry(stockEntry: StockEntry): Promise<StockEntry>;
+	createStockEntry(stockEntry: StockEntry): Promise<StockEntry>;
 
-  pluckProducts(order: Order): Promise<Order>;
+	pluckProducts(order: Order): Promise<Order>;
 
-  updateProductInfo(productAfter: Product): Promise<StockEntry>;
+	updateProductInfo(productAfter: Product): Promise<StockEntry>;
 }

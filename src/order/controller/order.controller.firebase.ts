@@ -6,14 +6,14 @@ import {EventContext} from 'firebase-functions';
 import {Product} from '../../product/model/product';
 
 export class OrderControllerFirebase implements OrderController {
-  constructor(private service: OrderService) {
+	constructor(private service: OrderService) {
 
-  }
+	}
 
-  public updateProductInfo(snap: Change<DocumentSnapshot>, context: EventContext): Promise<Product> {
-    const productAfter = snap.after.data() as Product;
-    return this.service.updateProductInfo(productAfter);
-  }
+	public updateProductInfo(snap: Change<DocumentSnapshot>, context: EventContext): Promise<Product> {
+		const productAfter = snap.after.data() as Product;
+		return this.service.updateProductInfo(productAfter);
+	}
 
 
 }

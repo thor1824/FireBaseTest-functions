@@ -19,28 +19,28 @@ import {UserService} from './user/service/user.service';
 import {UserControllerFirebase} from './user/controller/user.controller.firebase';
 
 export class DependencyFactory {
-  getProductController(): ProductController {
-    const repo: ProductRepository = new ProductRepositoryFirebase();
-    const service: ProductService = new ProductService(repo);
-    return new ProductControllerFirebase(service);
-  }
+	getProductController(): ProductController {
+		const repo: ProductRepository = new ProductRepositoryFirebase();
+		const service: ProductService = new ProductService(repo);
+		return new ProductControllerFirebase(service);
+	}
 
-  getStockController(): StockController {
-    const repo: StockRepository = new StockRepositoryFirebase();
-    const service: StockService = new StockService(repo);
-    return new StockControllerFirebase(service);
-  }
+	getStockController(): StockController {
+		const repo: StockRepository = new StockRepositoryFirebase();
+		const service: StockService = new StockService(repo);
+		return new StockControllerFirebase(service);
+	}
 
-  getOrderController(): OrderController {
-    const repo: OrderRepository = new OrderRepositoryFirebase();
-    const service: OrderService = new OrderService(repo);
-    return new OrderControllerFirebase(service);
-  }
+	getOrderController(): OrderController {
+		const repo: OrderRepository = new OrderRepositoryFirebase();
+		const service: OrderService = new OrderService(repo);
+		return new OrderControllerFirebase(service);
+	}
 
-  getUserController(): OrderController {
-    const repo: UserRepository = new UserRepositoryFirebase();
-    const service: UserService = new UserService(repo);
-    return new UserControllerFirebase(service);
-  }
+	getUserController(): OrderController {
+		const repo: UserRepository = new UserRepositoryFirebase();
+		const service: UserService = new UserService(repo);
+		return new UserControllerFirebase(service);
+	}
 
 }

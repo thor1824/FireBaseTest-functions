@@ -4,5 +4,5 @@ import {Product} from '../../product/model/product';
 
 export interface OrderController {
 
-  updateProductInfo(snap: Change<DocumentSnapshot>, context: EventContext): Promise<Product>;
+	updateProductInfo(snap: Change<DocumentSnapshot>, context: EventContext): Promise<Product>;
 }

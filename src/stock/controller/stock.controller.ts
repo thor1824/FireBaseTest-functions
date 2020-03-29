@@ -6,9 +6,9 @@ import {Order} from '../../order/model/order';
 
 export interface StockController {
 
-  createStockEntry(snap: Change<DocumentSnapshot>, context: EventContext): Promise<StockEntry>;
+	createStockEntry(snap: Change<DocumentSnapshot>, context: EventContext): Promise<StockEntry>;
 
-  pluckProducts(snap: Change<DocumentSnapshot>, context: EventContext): Promise<Order>;
+	pluckProducts(snap: Change<DocumentSnapshot>, context: EventContext): Promise<Order>;
 
-  updateProductInfo(snap: Change<DocumentSnapshot>, context: EventContext): Promise<StockEntry>;
+	updateProductInfo(snap: Change<DocumentSnapshot>, context: EventContext): Promise<StockEntry>;
 }
